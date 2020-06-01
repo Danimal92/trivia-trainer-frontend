@@ -24,7 +24,7 @@ export class App extends React.Component {
   }
 
   getCategories = () => {
-    fetch(`http://localhost:3000/get_categories/`)
+    fetch(`https://still-sands-23635.herokuapp.com/get_categories/`)
     .then(data => data.json())
     .then(data => this.setCategories(data.trivia_categories))
   }
@@ -44,7 +44,7 @@ export class App extends React.Component {
       currentCategory: element.category,
       alert: false
     })
-    fetch(`http://localhost:3000/get_questions`, {
+    fetch(`https://still-sands-23635.herokuapp.com/get_questions`, {
       method: "POST",
       headers: {
         "Content-Type": "Application/json",
