@@ -18,7 +18,7 @@ const Questions = (props) => {
   const displayQuestions = () => {
     
     if (props.currentQuestions) {
-      console.log("inside if statement");
+      
       allQuestions = props.currentQuestions.map((element) => (
         <QuestionComponent
           key={element.question}
@@ -117,7 +117,7 @@ const Questions = (props) => {
     
     
     // setQuestions(props.currentQuestions);
-    console.log(props.currentQuestions)
+    
     setLoaded(false)
     if (props.currentQuestions) {
           if(props.currentQuestions.length === 0){
@@ -132,7 +132,7 @@ const Questions = (props) => {
     
 
     return () => {
-      console.log("hit cleanup");
+      
       setLoaded(false);
       // setQuestions(null);
       allQuestions = null;
