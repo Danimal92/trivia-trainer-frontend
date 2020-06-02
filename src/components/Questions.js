@@ -183,7 +183,7 @@ const Questions = (props) => {
         
           <Container style={{backgroundColor: "#000000"}}>
             <Row className="justify-content-center">
-              <Spinner animation="grow" variant="warning" />
+              <Spinner animation="grow" variant="danger" />
             </Row>
           </Container>
         

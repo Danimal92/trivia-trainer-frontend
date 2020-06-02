@@ -29,7 +29,7 @@ const Home = (props) => {
     // borderRight: "solid 1px rgba(0,0,0,0.5)",
     paddingTop: "4px",
     paddingBottom: "8px",
-    background: "#E7A24D",
+    background: "#2B2D42",
     // background: ""
     
   };
@@ -159,7 +159,7 @@ const Home = (props) => {
                 ""
               )}
               <Row className="justify-content-center" noGutters>
-                <h1 style={{fontWeight: 'bold'}}>Pick your questions </h1>
+                <h1 style={{fontWeight: 'bold', borderBottom: '1px solid #FFFFFF'}}>Pick your questions </h1>
               </Row>
               <Row>
                 <Col lg={12} md={12} sm={12}>
@@ -328,7 +328,7 @@ const Home = (props) => {
                   <Button
                     style={{ marginTop: "40px" }}
                     size="sm"
-                    variant="dark"
+                    variant="light"
                     onClick={generateQuestionsHandler}
                   >
                     Generate questions

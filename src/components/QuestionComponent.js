@@ -24,7 +24,7 @@ export const QuestionComponent = (props) => {
     // outlineColor: '#000000',
     // outlineOffset: '2px',
     marginTop: '4px',
-    backgroundColor: "#E7A24D",
+    backgroundColor: "#2B2D42",
   };
 
   const {
