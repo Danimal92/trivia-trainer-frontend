@@ -156,17 +156,17 @@ const Questions = (props) => {
     <>{loaded ?
       <Container style={style}>
         <Container>
-          <Row noGutters className="justify-content-md-center">
+          <Row noGutters className="justify-content-center">
             <Button onClick={(e) => hideConfigHandler(e)}>Go back</Button>
           </Row>
           <br/>
-          <Row className="justify-content-md-center">
+          <Row className="justify-content-center">
             {loaded ? (
               <>{questions}</>
             ) : (
               <>
                 <Container>
-                  <Row className="justify-content-md-center">
+                  <Row className="justify-content-center">
                     <Spinner animation="grow" variant="dark" />
                   </Row>
                 </Container>
@@ -177,7 +177,7 @@ const Questions = (props) => {
       </Container>
       : <>
       <Container>
-        <Row className="justify-content-md-center">
+        <Row className="justify-content-center">
           <Spinner animation="grow" variant="dark" />
         </Row>
       </Container>

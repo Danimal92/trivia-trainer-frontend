@@ -102,16 +102,16 @@ export const QuestionComponent = (props) => {
           <Row>
             <h6>Difficulty: {difficulty.toUpperCase()}</h6>
           </Row>
-          <Row className="justify-content-md-center">
+          <Row className="justify-content-center">
             <h5>{decodeHTMLEntities(question)}</h5>
           </Row>
-          <Row className="justify-content-md-center">
+          <Row className="justify-content-center">
             <ToggleButtonGroup vertical type="radio" name="options">
               {displayAnswerButtons()}
             </ToggleButtonGroup>
           </Row>
           <br />
-          <Row className="justify-content-md-center">
+          <Row className="justify-content-center">
             {!boolean ? (
               ""
             ) : (
@@ -120,7 +120,7 @@ export const QuestionComponent = (props) => {
               </h6>
             )}
           </Row>
-          <Row className="justify-content-md-center">
+          <Row className="justify-content-center">
             <Button
               onClick={submitHandler}
               disabled={boolean ? true : false}
@@ -132,7 +132,7 @@ export const QuestionComponent = (props) => {
               {boolean === "Wrong." ? "Ouch" : ""}
             </Button>
           </Row>
-          {alert ? <Row className='justify-content-md-center' style={{ paddingTop: '8px' }}><Alert variant={'danger'} onClick={() => {setAlert(false)}} dismissible>
+          {alert ? <Row className='justify-content-center' style={{ paddingTop: '8px' }}><Alert variant={'danger'} onClick={() => {setAlert(false)}} dismissible>
     Please make a selection.
   </Alert></Row> : ''}
           

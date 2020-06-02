@@ -156,7 +156,7 @@ const Home = (props) => {
               ) : (
                 ""
               )}
-              <Row className="justify-content-md-center" noGutters>
+              <Row className="justify-content-center" noGutters>
                 <h1 style={{}}>Pick your questions </h1>
               </Row>
               <Row>
