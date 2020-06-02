@@ -323,7 +323,7 @@ const Home = (props) => {
               <Row noGutters className='justify-content-center'>
                 
                   <Button
-                    style={{ margin: "2px" }}
+                    style={{ marginTop: "40px" }}
                     size="sm"
                     variant="secondary"
                     onClick={generateQuestionsHandler}
