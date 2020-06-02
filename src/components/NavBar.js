@@ -9,7 +9,7 @@ const NavBar = (props) => {
 
   return (
     <React.Fragment>
-      <Navbar style={{backgroundColor: "#e6afba"}} bg="#fff5f7" expand="lg">
+      <Navbar style={{backgroundColor: "#000000"}}  variant='dark' expand="lg">
         <Navbar.Brand >Trivia Trainer </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

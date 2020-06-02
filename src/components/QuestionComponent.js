@@ -18,8 +18,13 @@ export const QuestionComponent = (props) => {
   const [disabled, setDisabled] = useState(false)
 
   const style = {
-    paddingBottom: "2px",
-    paddingTop: "2px",
+    paddingBottom: "8px",
+    paddingTop: "8px",
+    // outlineStyle: 'solid',
+    // outlineColor: '#000000',
+    // outlineOffset: '2px',
+    marginTop: '4px',
+    backgroundColor: "#E7A24D",
   };
 
   const {
@@ -65,7 +70,7 @@ export const QuestionComponent = (props) => {
     return answers.map((answer) => (
       <ToggleButton
         key={answer}
-        variant="outline-dark"
+        variant="info"
         type="radio"
         value={answer}
         size="sm"
@@ -94,10 +99,10 @@ export const QuestionComponent = (props) => {
 
   return (
     <>
-      <Container>
-        <Container style={style}>
+      <Container style={style}>
+        <Container >
           <Row>
-            <h6>Category: {category}</h6>
+            <h6 style={{color: '#ab0000'}}>Category: {category}</h6>
           </Row>
           <Row>
             <h6>Difficulty: {difficulty.toUpperCase()}</h6>
@@ -124,7 +129,7 @@ export const QuestionComponent = (props) => {
             <Button
               onClick={submitHandler}
               disabled={boolean ? true : false}
-              variant={color ? color : "secondary"}
+              variant={color ? color : "light"}
               size="sm"
             >
               {!boolean ? "Submit" : ""}
@@ -138,7 +143,7 @@ export const QuestionComponent = (props) => {
           
           
         </Container>
-        <hr />
+      
       </Container>
     </>
   );

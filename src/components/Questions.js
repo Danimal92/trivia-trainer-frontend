@@ -13,12 +13,9 @@ let allQuestions = null;
 const Questions = (props) => {
   const [questions, setQuestions] = useState(null);
   const [loaded, setLoaded] = useState(false);
-  
 
   const displayQuestions = () => {
-    
     if (props.currentQuestions) {
-      
       allQuestions = props.currentQuestions.map((element) => (
         <QuestionComponent
           key={element.question}
@@ -29,19 +26,17 @@ const Questions = (props) => {
           ])}
         ></QuestionComponent>
       ));
-      setQuestions(allQuestions)
+      setQuestions(allQuestions);
     } else {
       setLoaded(false);
     }
 
-    
-    setTimeout(setTrue,500)
-    
+    setTimeout(setTrue, 500);
   };
 
   const setTrue = () => {
-    setLoaded(true)
-  }
+    setLoaded(true);
+  };
 
   const hideConfigHandler = (e) => {
     e.preventDefault();
@@ -51,13 +46,16 @@ const Questions = (props) => {
   };
 
   const style = {
-    borderTop: "2px solid #000000",
-    borderBottom: "2px solid #000000",
-    borderLeft: "2px solid #b8bfba",
-    borderRight: "2px solid #b8bfba",
+    // borderTop: "4px solid #FFFFFF",
+    // borderBottom: "4px solid #FFFFFF",
+    // borderLeft: "4px solid #FFFFFF",
+    // borderRight: "4px solid #FFFFFF",
     paddingTop: "4px",
     paddingBottom: "8px",
-    backgroundColor: "#fff5f7",
+    // backgroundColor: "#E7A24D"
+    // backgroundColor: "#E7A24D",
+    // height: '3000px', /* Used to enable scrolling */
+    // background: 'linear-gradient(55deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 85%)'
   };
 
   function shuffle(array) {
@@ -107,32 +105,25 @@ const Questions = (props) => {
   //   resolve()
   // });
 
-  useEffect(() => {
-
-
-
-  })
+  useEffect(() => {});
 
   useEffect(() => {
-    
-    
     // setQuestions(props.currentQuestions);
-    
-    setLoaded(false)
+
+    setLoaded(false);
     if (props.currentQuestions) {
-          if(props.currentQuestions.length === 0){
-            
-            alert("Not enough questions of this type, please choose fewer questions")
-            // return <Redirect to='/' />
-          }
-          if (props.currentQuestions.length > 0) {
-            displayQuestions()
-          }
-        }
-    
+      if (props.currentQuestions.length === 0) {
+        alert(
+          "Not enough questions of this type, please choose fewer questions"
+        );
+        // return <Redirect to='/' />
+      }
+      if (props.currentQuestions.length > 0) {
+        displayQuestions();
+      }
+    }
 
     return () => {
-      
       setLoaded(false);
       // setQuestions(null);
       allQuestions = null;
@@ -153,35 +144,50 @@ const Questions = (props) => {
   // }, [questions]);
 
   return (
-    <>{loaded ?
-      <Container style={style}>
-        <Container>
-          <Row noGutters className="justify-content-center">
-            <Button onClick={(e) => hideConfigHandler(e)}>Go back</Button>
-          </Row>
-          <br/>
-          <Row className="justify-content-center">
-            {loaded ? (
-              <>{questions}</>
-            ) : (
-              <>
-                <Container>
-                  <Row className="justify-content-center">
-                    <Spinner animation="grow" variant="dark" />
-                  </Row>
-                </Container>
-              </>
-            )}
-          </Row>
+    <>
+      {loaded ? (
+        <Container style={style}>
+          <Container>
+            <Row className="justify-content-center">
+              <Button
+                style={{
+                  marginBottom: "8px",
+                  position: "fixed",
+                  top: "0",
+                  // width: '100%',
+                  zIndex: "100",
+                }}
+                variant="dark"
+                onClick={(e) => hideConfigHandler(e)}
+              >
+                Go back
+              </Button>
+            </Row>
+
+            <Row className="justify-content-center">
+              {loaded ? (
+                <>{questions}</>
+              ) : (
+                
+                  <Container style={{}}>
+                    <Row className="justify-content-center">
+                      <Spinner  animation="grow" variant="dark" />
+                    </Row>
+                  </Container>
+                
+              )}
+            </Row>
+          </Container>
         </Container>
-      </Container>
-      : <>
-      <Container>
-        <Row className="justify-content-center">
-          <Spinner animation="grow" variant="dark" />
-        </Row>
-      </Container>
-    </>}
+      ) : (
+        
+          <Container style={{backgroundColor: "#000000"}}>
+            <Row className="justify-content-center">
+              <Spinner animation="grow" variant="warning" />
+            </Row>
+          </Container>
+        
+      )}
     </>
   );
 };

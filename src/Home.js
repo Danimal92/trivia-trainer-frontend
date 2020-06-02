@@ -19,17 +19,19 @@ const Home = (props) => {
   const [typeString, setType] = useState("");
   const [typeStringVisual, setTypeStringVisual] = useState("");
   const [categoryID, setCategoryID] = useState("");
-  const [updateQuestions, setUpdateQuestions] = useState(false);
+  // const [updateQuestions, setUpdateQuestions] = useState(false);
   const [hideConfig, setHideConfig] = useState(false);
 
   let style = {
-    borderTop: "2px solid #000000",
-    borderBottom: "2px solid #000000",
-    borderLeft: "2px solid #b8bfba",
-    borderRight: "2px solid #b8bfba",
+    // borderTop: "solid 1px rgba(0,0,0,0.5)",
+    // borderBottom: "solid 1px rgba(0,0,0,0.5)",
+    // borderLeft: "solid 1px rgba(0,0,0,0.5)",
+    // borderRight: "solid 1px rgba(0,0,0,0.5)",
     paddingTop: "4px",
     paddingBottom: "8px",
-    backgroundColor: "#fff5f7",
+    background: "#E7A24D",
+    // background: ""
+    
   };
 
   const createParametersObject = () => {
@@ -137,9 +139,9 @@ const Home = (props) => {
   }, [props.currentQuestions]);
 
   return (
-    <>
+    <div >
       {!hideConfig ? (
-        <Container style={style}>
+        <Container  style={style}>
           <Container>
             <Container>
               {props.alert ? (
@@ -157,7 +159,7 @@ const Home = (props) => {
                 ""
               )}
               <Row className="justify-content-center" noGutters>
-                <h1 style={{}}>Pick your questions </h1>
+                <h1 style={{fontWeight: 'bold'}}>Pick your questions </h1>
               </Row>
               <Row>
                 <Col lg={12} md={12} sm={12}>
@@ -167,8 +169,9 @@ const Home = (props) => {
                   <Dropdown drop={"right"}>
                     <Dropdown.Toggle
                       size="sm"
-                      variant="secondary"
+                      variant="info"
                       id="dropdown-basic"
+                      
                     >
                       {categoryString.length ? categoryString : "Random"}
                     </Dropdown.Toggle>
@@ -224,7 +227,7 @@ const Home = (props) => {
                   <Dropdown>
                     <Dropdown.Toggle
                       size="sm"
-                      variant="secondary"
+                      variant="info"
                       id="dropdown-basic"
                     >
                       {difficultyString.length ? difficultyString : "Random"}
@@ -278,7 +281,7 @@ const Home = (props) => {
                   <Dropdown>
                     <Dropdown.Toggle
                       size="sm"
-                      variant="secondary"
+                      variant="info"
                       id="dropdown-basic"
                     >
                       {typeString.length ? typeStringVisual : "Random"}
@@ -325,7 +328,7 @@ const Home = (props) => {
                   <Button
                     style={{ marginTop: "40px" }}
                     size="sm"
-                    variant="secondary"
+                    variant="dark"
                     onClick={generateQuestionsHandler}
                   >
                     Generate questions
@@ -343,7 +346,7 @@ const Home = (props) => {
           currentQuestions={props.currentQuestions}
         />
       )}
-    </>
+    </div>
   );
 };
 

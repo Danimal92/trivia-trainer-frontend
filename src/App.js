@@ -6,6 +6,7 @@ import {BrowserRouter as Router,Route,Redirect,Switch} from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
 import Layout from "./components/Layout";
+import Container from 'react-bootstrap/Container'
 // import background from "/Users/flatironschool/Desktop/Trivia remake/trivia-frontend/src/images/gradient_background.jpg";
 
 export class App extends React.Component {
@@ -21,6 +22,8 @@ export class App extends React.Component {
     // backgroundImage: `url(${background})`
     // backgroundColor: "#fff7f9"
     // borderLeft:"10px solid #FFFFFF",borderTop:"10px solid #FFFFFF"
+    fontFamily: 'Archivo',
+    background: '#000000'
   }
 
   getCategories = () => {
