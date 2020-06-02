@@ -320,9 +320,8 @@ const Home = (props) => {
           </Container>
           <Container>
             <Container>
-              <Row noGutters>
-                <Col lg={5} md={5} sm={5} xs={5}></Col>
-                <Col lg={2} md={2} sm={2} xs={2}>
+              <Row noGutters className='justify-content-center'>
+                
                   <Button
                     style={{ margin: "2px" }}
                     size="sm"
@@ -331,8 +330,8 @@ const Home = (props) => {
                   >
                     Generate questions
                   </Button>
-                </Col>
-                <Col lg={5} md={5} sm={5} xs={5}></Col>
+               
+                
               </Row>
               <hr />
             </Container>
