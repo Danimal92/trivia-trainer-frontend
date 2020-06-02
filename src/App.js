@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import NavBar from "./components/NavBar.js";
-import Navbar from "react-bootstrap/Navbar"
+// import Navbar from "react-bootstrap/Navbar"
 import {BrowserRouter as Router,Route,Redirect,Switch} from "react-router-dom";
 import Home from "./Home";
 import About from "./About";

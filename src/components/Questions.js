@@ -5,8 +5,8 @@ import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Spinner from "react-bootstrap/Spinner";
-import Col from "react-bootstrap/Col";
-import {Redirect} from "react-router-dom";
+// import Col from "react-bootstrap/Col";
+// import {Redirect} from "react-router-dom";
 
 let allQuestions = null;
 
