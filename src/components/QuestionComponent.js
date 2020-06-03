@@ -102,7 +102,7 @@ export const QuestionComponent = (props) => {
       <Container style={style}>
         <Container >
           <Row>
-            <h6 style={{color: '#ab0000'}}>Category: {category}</h6>
+            <h6 style={{color: '#ef233c'}}>Category: {category}</h6>
           </Row>
           <Row>
             <h6>Difficulty: {difficulty.toUpperCase()}</h6>
