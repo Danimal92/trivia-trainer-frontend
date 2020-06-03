@@ -31,7 +31,6 @@ const Home = (props) => {
     paddingBottom: "8px",
     background: "#2B2D42",
     // background: ""
-    
   };
 
   const createParametersObject = () => {
@@ -139,9 +138,9 @@ const Home = (props) => {
   }, [props.currentQuestions]);
 
   return (
-    <div >
+    <div>
       {!hideConfig ? (
-        <Container  style={style}>
+        <Container style={style}>
           <Container>
             <Container>
               {props.alert ? (
@@ -159,7 +158,14 @@ const Home = (props) => {
                 ""
               )}
               <Row className="justify-content-center" noGutters>
-                <h1 style={{fontWeight: 'bold', borderBottom: '1px solid #FFFFFF'}}>Pick your questions </h1>
+                <h1
+                  style={{
+                    fontWeight: "bold",
+                    borderBottom: "1px solid #FFFFFF",
+                  }}
+                >
+                  Pick your questions{" "}
+                </h1>
               </Row>
               <Row>
                 <Col lg={12} md={12} sm={12}>
@@ -171,12 +177,13 @@ const Home = (props) => {
                       size="sm"
                       variant="info"
                       id="dropdown-basic"
-                      
                     >
                       {categoryString.length ? categoryString : "Random"}
                     </Dropdown.Toggle>
 
-                    <Dropdown.Menu>
+                    <Dropdown.Menu
+                      style={{ height: "300px", overflowY: "scroll" }}
+                    >
                       <Dropdown.Item
                         key={"random"}
                         onClick={() => {
@@ -195,7 +202,7 @@ const Home = (props) => {
             <hr />
             <Container>
               <Row>
-                <Col lg={5} md={4} sm={4}>
+                <Col lg={6} md={6} sm={6}>
                   <Form>
                     <Form.Group controlId="formBasicRangeCustom">
                       <Form.Label>
@@ -323,18 +330,15 @@ const Home = (props) => {
           </Container>
           <Container>
             <Container>
-              <Row noGutters className='justify-content-center'>
-                
-                  <Button
-                    style={{ marginTop: "40px" }}
-                    size="sm"
-                    variant="light"
-                    onClick={generateQuestionsHandler}
-                  >
-                    Generate questions
-                  </Button>
-               
-                
+              <Row noGutters className="justify-content-center">
+                <Button
+                  style={{ marginTop: "40px" }}
+                  size="sm"
+                  variant="light"
+                  onClick={generateQuestionsHandler}
+                >
+                  Generate questions
+                </Button>
               </Row>
               <hr />
             </Container>
