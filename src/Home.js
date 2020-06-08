@@ -10,11 +10,11 @@ import Badge from "react-bootstrap/Badge";
 import Button from "react-bootstrap/Button";
 import Questions from "./components/Questions";
 import Alert from "react-bootstrap/Alert";
-import darkgithublogo from '/Users/flatironschool/Desktop/Trivia remake/trivia-frontend/src/images/GitHub-Mark-32px.png'
-import lightgithublogo from '/Users/flatironschool/Desktop/Trivia remake/trivia-frontend/src/images/GitHub-Mark-Light-32px.png'
+import darkgithublogo from './images/GitHub-Mark-32px.png'
+import lightgithublogo from './images/GitHub-Mark-Light-32px.png'
 import Image from "react-bootstrap/Image";
-import darklinkedinlogo from '/Users/flatironschool/Desktop/Trivia remake/trivia-frontend/src/images/linkedin-dark.png'
-import lightlinkedinlogo from '/Users/flatironschool/Desktop/Trivia remake/trivia-frontend/src/images/linkedin-light.png'
+import darklinkedinlogo from './images/linkedin-dark.png'
+import lightlinkedinlogo from './images/linkedin-light.png'
 
 const Home = (props) => {
   const [amountString, setAmount] = useState(25);
