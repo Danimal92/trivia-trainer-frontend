@@ -9,6 +9,7 @@ import Layout from "./components/Layout";
 import Container from 'react-bootstrap/Container'
 // import background from "/Users/flatironschool/Desktop/Trivia remake/trivia-frontend/src/images/gradient_background.jpg";
 
+
 export class App extends React.Component {
 
   state = {
@@ -23,7 +24,7 @@ export class App extends React.Component {
     // backgroundColor: "#fff7f9"
     // borderLeft:"10px solid #FFFFFF",borderTop:"10px solid #FFFFFF"
     fontFamily: 'Archivo',
-    background: '#000000',
+    // background: '#000000',
     color:  '#FFFFFF'
   }
 
@@ -136,8 +137,8 @@ export class App extends React.Component {
             </Switch>
           </Router>
         </Layout>
-        
       </div>
+      
     );
   }
 }

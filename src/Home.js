@@ -10,7 +10,11 @@ import Badge from "react-bootstrap/Badge";
 import Button from "react-bootstrap/Button";
 import Questions from "./components/Questions";
 import Alert from "react-bootstrap/Alert";
-// import Tooltip from "react-bootstrap/Tooltip";
+import darkgithublogo from '/Users/flatironschool/Desktop/Trivia remake/trivia-frontend/src/images/GitHub-Mark-32px.png'
+import lightgithublogo from '/Users/flatironschool/Desktop/Trivia remake/trivia-frontend/src/images/GitHub-Mark-Light-32px.png'
+import Image from "react-bootstrap/Image";
+import darklinkedinlogo from '/Users/flatironschool/Desktop/Trivia remake/trivia-frontend/src/images/linkedin-dark.png'
+import lightlinkedinlogo from '/Users/flatironschool/Desktop/Trivia remake/trivia-frontend/src/images/linkedin-light.png'
 
 const Home = (props) => {
   const [amountString, setAmount] = useState(25);
@@ -21,6 +25,8 @@ const Home = (props) => {
   const [categoryID, setCategoryID] = useState("");
   // const [updateQuestions, setUpdateQuestions] = useState(false);
   const [hideConfig, setHideConfig] = useState(false);
+  const [githubIcon, setGithubIcon] = useState(false)
+  const [linkedIcon, setLinkedIcon] = useState(false)
 
   let style = {
     // borderTop: "solid 1px rgba(0,0,0,0.5)",
@@ -95,6 +101,15 @@ const Home = (props) => {
     props.toggleAlert();
   };
 
+
+  const lightenGithubLogo = () => {
+    setGithubIcon(true)
+  }
+
+  const darkenGithubLogo = () => {
+    setGithubIcon(false)
+  }
+
   // const checkHideConfig = () => {
   //   if(props.alert === true)
   // }
@@ -140,6 +155,7 @@ const Home = (props) => {
   return (
     <div>
       {!hideConfig ? (
+        <>
         <Container style={style}>
           <Container>
             <Container>
@@ -160,11 +176,10 @@ const Home = (props) => {
               <Row className="justify-content-center" noGutters>
                 <h1
                   style={{
-                    fontWeight: "bold",
-                    borderBottom: "1px solid #FFFFFF",
+                    fontWeight: "bold"
                   }}
                 >
-                  Pick your questions{" "}
+                  Pick Your Questions{" "}
                 </h1>
               </Row>
               <Row>
@@ -344,6 +359,8 @@ const Home = (props) => {
             </Container>
           </Container>
         </Container>
+        <Container style={{marginTop: '6px'}} ><Row className='justify-content-center'><Col xs='auto'><a onMouseOver={lightenGithubLogo} onMouseOut={darkenGithubLogo} href="https://github.com/Danimal92/trivia-trainer-frontend"><Image src={githubIcon ? lightgithublogo : darkgithublogo } alt="Github link" roundedCircle/></a></Col><Col xs='auto'><a onMouseOver={() => setLinkedIcon(true)} onMouseOut={() => setLinkedIcon(false)} href='https://www.linkedin.com/in/daniel-zaltsman/'><Image src={linkedIcon ? lightlinkedinlogo : darklinkedinlogo} /></a></Col></Row></Container>
+        </>
       ) : (
         <Questions
           toggleHideConfig={toggleHideConfig}
@@ -351,6 +368,7 @@ const Home = (props) => {
         />
       )}
     </div>
+    
   );
 };
 
