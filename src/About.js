@@ -8,7 +8,8 @@ const About = () => {
     let style = {
         background: "#2B2D42",
         border: '1px solid #ef233c',
-        padding: '40px'
+        padding: '40px',
+        position: 'relative'
     }
 
 
