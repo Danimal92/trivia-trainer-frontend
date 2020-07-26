@@ -14,25 +14,7 @@ const Questions = (props) => {
   const [questions, setQuestions] = useState(null);
   const [loaded, setLoaded] = useState(false);
 
-  const displayQuestions = () => {
-    if (props.currentQuestions) {
-      allQuestions = props.currentQuestions.map((element) => (
-        <QuestionComponent
-          key={element.question}
-          question={element}
-          answers={shuffle([
-            element.correct_answer,
-            ...element.incorrect_answers,
-          ])}
-        ></QuestionComponent>
-      ));
-      setQuestions(allQuestions);
-    } else {
-      setLoaded(false);
-    }
-
-    setTimeout(setTrue, 500);
-  };
+ 
 
   const setTrue = () => {
     setLoaded(true);
@@ -109,6 +91,25 @@ const Questions = (props) => {
 
   useEffect(() => {
     // setQuestions(props.currentQuestions);
+    const displayQuestions = () => {
+      if (props.currentQuestions) {
+        allQuestions = props.currentQuestions.map((element) => (
+          <QuestionComponent
+            key={element.question}
+            question={element}
+            answers={shuffle([
+              element.correct_answer,
+              ...element.incorrect_answers,
+            ])}
+          ></QuestionComponent>
+        ));
+        setQuestions(allQuestions);
+      } else {
+        setLoaded(false);
+      }
+  
+      setTimeout(setTrue, 500);
+    };
 
     setLoaded(false);
     if (props.currentQuestions) {
