@@ -18,7 +18,7 @@ export const QuestionComponent = (props) => {
   const [disabled, setDisabled] = useState(false)
 
   const style = {
-    paddingBottom: "6px",
+    paddingBottom: "8px",
     paddingTop: "8px",
     // outlineStyle: 'solid',
     // outlineColor: '#000000',
