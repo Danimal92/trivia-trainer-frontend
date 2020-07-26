@@ -33,7 +33,7 @@ const Questions = (props) => {
     // borderLeft: "4px solid #FFFFFF",
     // borderRight: "4px solid #FFFFFF",
     paddingTop: "4px",
-    paddingBottom: "8px",
+    paddingBottom: "10px",
     // backgroundColor: "#E7A24D"
     // backgroundColor: "#E7A24D",
     // height: '3000px', /* Used to enable scrolling */
